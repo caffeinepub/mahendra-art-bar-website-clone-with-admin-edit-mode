@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup using proper Outlet pattern, QueryClient provider, route definitions for Home/Login/Admin pages, and Sonner toast notifications.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring warm, earthy tones inspired by Indian culture (saffron, maroon, gold) with support for English fonts and custom scrollbar styling.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color palette using OKLCH values for traditional Indian aesthetic and Hindi font family support.",
+  "frontend/src/pages/HomePage.tsx": "Complete single-page website with automatic admin edit mode activation on login, full inline editing functionality for all text and images using EditableText and EditableImage components with ExternalBlob integration, Save/Cancel buttons with proper backend integration via updateWebsiteContent, and real-time content state management.",
+  "frontend/src/pages/LoginPage.tsx": "Admin login page with Internet Identity authentication, error handling, and redirect logic for admin users.",
+  "frontend/src/pages/AdminDashboard.tsx": "Protected admin dashboard with direct access to website edit mode, content overview statistics, step-by-step editing instructions, and system information display with logout functionality.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend operations including user role checking, user profile management, website content fetching/updating with proper caching and invalidation strategies, and admin status verification.",
+  "frontend/src/components/EditModeProvider.tsx": "Context provider for managing edit mode state across the application with toggle and setter functions.",
+  "frontend/src/components/EditableText.tsx": "Reusable component for inline text editing that switches between display and input modes based on edit state, with immediate onChange updates for real-time editing experience.",
+  "frontend/src/components/EditableImage.tsx": "Component for displaying images with upload functionality in edit mode, converting uploaded files to ExternalBlob format with progress tracking, file validation (type and 5MB size limit), and hover overlay with \"Change Image\" button."
+}

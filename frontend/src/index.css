@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Traditional Indian-inspired color palette with warm, earthy tones */
+    --background: oklch(98% 0.01 85);
+    --foreground: oklch(20% 0.02 85);
+
+    --card: oklch(100% 0 0);
+    --card-foreground: oklch(20% 0.02 85);
+
+    --popover: oklch(100% 0 0);
+    --popover-foreground: oklch(20% 0.02 85);
+
+    /* Rich saffron/orange primary color inspired by Indian culture */
+    --primary: oklch(65% 0.18 45);
+    --primary-foreground: oklch(100% 0 0);
+
+    /* Deep maroon secondary color */
+    --secondary: oklch(35% 0.08 25);
+    --secondary-foreground: oklch(98% 0.01 85);
+
+    /* Muted earth tones */
+    --muted: oklch(92% 0.02 85);
+    --muted-foreground: oklch(45% 0.02 85);
+
+    /* Warm golden accent */
+    --accent: oklch(75% 0.15 75);
+    --accent-foreground: oklch(20% 0.02 85);
+
+    --destructive: oklch(58% 0.22 25);
+    --destructive-foreground: oklch(100% 0 0);
+
+    --border: oklch(88% 0.02 85);
+    --input: oklch(88% 0.02 85);
+    --ring: oklch(65% 0.18 45);
+
+    --radius: 0.5rem;
+
+    --success: oklch(65% 0.15 145);
+    --success-foreground: oklch(100% 0 0);
+
+    --warning: oklch(75% 0.15 75);
+    --warning-foreground: oklch(20% 0.02 85);
+  }
+
+  .dark {
+    /* Dark mode with rich, warm tones */
+    --background: oklch(18% 0.02 85);
+    --foreground: oklch(95% 0.01 85);
+
+    --card: oklch(22% 0.02 85);
+    --card-foreground: oklch(95% 0.01 85);
+
+    --popover: oklch(22% 0.02 85);
+    --popover-foreground: oklch(95% 0.01 85);
+
+    /* Brighter saffron for dark mode */
+    --primary: oklch(70% 0.20 45);
+    --primary-foreground: oklch(15% 0.02 85);
+
+    /* Lighter maroon for dark mode */
+    --secondary: oklch(28% 0.06 25);
+    --secondary-foreground: oklch(95% 0.01 85);
+
+    --muted: oklch(25% 0.02 85);
+    --muted-foreground: oklch(65% 0.02 85);
+
+    --accent: oklch(70% 0.15 75);
+    --accent-foreground: oklch(15% 0.02 85);
+
+    --destructive: oklch(58% 0.22 25);
+    --destructive-foreground: oklch(100% 0 0);
+
+    --border: oklch(30% 0.02 85);
+    --input: oklch(30% 0.02 85);
+    --ring: oklch(70% 0.20 45);
+
+    --success: oklch(65% 0.15 145);
+    --success-foreground: oklch(15% 0.02 85);
+
+    --warning: oklch(75% 0.15 75);
+    --warning-foreground: oklch(15% 0.02 85);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--primary));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(var(--accent));
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font support for English content */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
